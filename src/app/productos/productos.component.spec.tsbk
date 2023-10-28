@@ -15,10 +15,28 @@
     Ayuda:      https://parzibyte.me/blog/contrataciones-ayuda/
     Contacto:   https://parzibyte.me/blog/contacto/
 */
-import { Cliente } from './cliente';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-describe('Cliente', () => {
-  it('should create an instance', () => {
-    expect(new Cliente("Cristobal","Guatemala")).toBeTruthy();
+import { ProductosComponent } from './productos.component';
+
+describe('ProductosComponent', () => {
+  let component: ProductosComponent;
+  let fixture: ComponentFixture<ProductosComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ ProductosComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ProductosComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
   });
 });

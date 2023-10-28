@@ -19,6 +19,6 @@ import { Producto } from './producto';
 
 describe('Producto', () => {
   it('should create an instance', () => {
-    expect(new Producto()).toBeTruthy();
+    expect(new Producto("Libro","500 paginas",125,1)).toBeTruthy();
   });
 });
